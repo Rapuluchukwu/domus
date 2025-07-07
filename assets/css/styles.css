@@ -388,14 +388,9 @@ p {
 }
 
 .listing {
-    background: var(--white-color);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
     transform: translateY(30px);
     animation: cardSlideIn 0.8s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .listing:nth-child(1) {
@@ -468,12 +463,13 @@ p {
     transition: transform 0.3s ease;
 }
 
-.property-card:hover img {
+.property-card img:hover {
     transform: scale(1.05);
 }
 
 .property-content {
-    padding: 1.5rem;
+    width: 500px;
+    padding: 20px;
 }
 
 .property-title {
@@ -484,7 +480,7 @@ p {
     transition: color 0.3s ease;
 }
 
-.property-card:hover .property-title {
+.property-title:hover {
     color: var(--primary-color);
 }
 
@@ -515,14 +511,13 @@ p {
     color: var(--primary-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 6px;
+    border: none;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.view-details::before {
+/* .view-details::before {
     content: '';
     position: absolute;
     top: 0;
@@ -532,14 +527,14 @@ p {
     background: var(--primary-color);
     transition: left 0.3s ease;
     z-index: -1;
-}
+} */
 
-.view-details:hover::before {
+/* .view-details:hover::before {
     left: 0;
-}
+} */
 
 .view-details:hover {
-    color: var(--white-color);
+    border: none;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
